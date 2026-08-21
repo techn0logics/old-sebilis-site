@@ -1,1070 +1,431 @@
-/* =========================================================
-   VARIABLES
-========================================================= */
-
+/* =========================================================VARIABLES========================================================= */
 :root {
-
-    --bg: #080807;
-
-    --panel:
-        rgba(8, 8, 7, 0.92);
-
-    --text:
-        #e3d8c4;
-
-    --muted:
-        #aaa08e;
-
-    --gold:
-        #c8a75d;
-
-    --gold-bright:
-        #dfbd6b;
-
-    --gold-dark:
-        #70592c;
-
-    --red:
-        #9f1d18;
-
-    --max:
-        1180px;
-
+	--bg: #080807;
+	--panel:rgba(8, 8, 7, 0.92);
+	--text: #e3d8c4;
+	--muted: #aaa08e;
+	--gold: #c8a75d;
+	--gold-bright: #dfbd6b;
+	--gold-dark: #70592c;
+	--red: #9f1d18;
+	--max: 1180px;
 }
-
-
-
-/* =========================================================
-   BASE
-========================================================= */
-
+/* =========================================================BASE========================================================= */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
-
-
 body {
-
-    margin: 0;
-
-    background-color:
-        var(--bg);
-
-    background-image:
-
-        linear-gradient(
-            rgba(0, 0, 0, 0.13),
-            rgba(0, 0, 0, 0.13)
-        ),
-
-        url("../images/background.png");
-
-    background-repeat:
-        repeat;
-
-    background-position:
-        top center;
-
-    color:
-        var(--text);
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    line-height:
-        1.7;
-
+	margin: 0;
+	background-color: var(--bg);
+	background-image:linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 0, 0, 0.13)),url("../images/background.png");
+	background-repeat: repeat;
+	background-position: top center;
+	color: var(--text);
+	font-family:Georgia,"Times New Roman",serif;
+	line-height: 1.7;
 }
-
-
 img {
-
-    max-width:
-        100%;
-
-    display:
-        block;
-
+	max-width: 100%;
+	display: block;
 }
-
-
 a {
-    color:
-        var(--gold);
+	color: var(--gold);
 }
-
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
+/* =========================================================NAVIGATION========================================================= */
 .site-header {
-
-    position:
-        sticky;
-
-    top:
-        0;
-
-    z-index:
-        100;
-
-    background:
-        rgba(5, 5, 5, 0.94);
-
-    border-bottom:
-        1px solid rgba(189, 153, 78, 0.3);
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.55);
-
-    backdrop-filter:
-        blur(8px);
-
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background:rgba(5, 5, 5, 0.94);
+	border-bottom: 1px solid rgba(189, 153, 78, 0.3);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(8px);
 }
-
-
 .nav-wrap {
-
-    width:
-        min(94%, var(--max));
-
-    margin:
-        auto;
-
-    min-height:
-        72px;
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    gap:
-        32px;
-
+	width:min(94%, var(--max));
+	margin: auto;
+	min-height: 72px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
 }
-
-
 .brand {
-
-    color:
-        var(--gold-bright);
-
-    text-decoration:
-        none;
-
-    font-size:
-        1.1rem;
-
-    font-weight:
-        bold;
-
-    letter-spacing:
-        0.12em;
-
+	color: var(--gold-bright);
+	text-decoration: none;
+	font-size: 1.1rem;
+	font-weight: bold;
+	letter-spacing: 0.12em;
 }
-
-
 .site-nav {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        24px;
-
+	display: flex;
+	align-items: center;
+	gap: 24px;
 }
-
-
 .site-nav a {
-
-    position:
-        relative;
-
-    color:
-        #ded7ca;
-
-    text-decoration:
-        none;
-
-    font-size:
-        0.95rem;
-
-    letter-spacing:
-        0.04em;
-
-    transition:
-        color 0.2s ease;
-
+	position: relative;
+	color: #ded7ca;
+	text-decoration: none;
+	font-size: 0.95rem;
+	letter-spacing: 0.04em;
+	transition: color 0.2s ease;
 }
-
-
-.site-nav a:hover,
-.site-nav a.active {
-
-    color:
-        var(--gold-bright);
-
+.site-nav a:hover,.site-nav a.active {
+	color: var(--gold-bright);
 }
-
-
 .site-nav a.active::after {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    left:
-        0;
-
-    right:
-        0;
-
-    bottom:
-        -7px;
-
-    height:
-        1px;
-
-    background:
-        var(--gold);
-
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -7px;
+	height: 1px;
+	background: var(--gold);
 }
-
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
+/* =========================================================HERO========================================================= */
 .hero-section {
-
-    width:
-        100%;
-
-    padding:
-        30px 18px 10px;
-
+	width: 100%;
+	padding: 30px 18px 10px;
 }
-
-
 .hero-wrap {
-
-    width:
-        min(1600px, 98%);
-
-    margin:
-        auto;
-
+	width:min(1600px, 98%);
+	margin: auto;
 }
-
-
 .hero-image {
-
-    width:
-        80%;
-
-    height:
-        auto;
-
-    margin:
-        auto;
-
-    box-shadow:
-        0 18px 60px rgba(0, 0, 0, 0.55);
-
+	width: 80%;
+	height: auto;
+	margin: auto;
+	box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
 }
-
-/* =========================================================
-   SHORTER LAPTOP SCREENS
-========================================================= */
-
+/* =========================================================SHORTER LAPTOP SCREENS========================================================= */
 @media (max-height: 900px) and (min-width: 801px) {
-
-    .hero-section {
-        padding-top: 12px;
-        padding-bottom: 4px;
-    }
-
-    .hero-wrap {
-        width: min(1180px, 90%);
-    }
-
+	.hero-section {
+		padding-top: 12px;
+		padding-bottom: 4px;
+	}
+	.hero-wrap {
+		width: min(1180px, 90%);
+	}
 }
-
-
-/* =========================================================
-   VERY SHORT LAPTOP SCREENS
-========================================================= */
-
+/* =========================================================VERY SHORT LAPTOP SCREENS========================================================= */
 @media (max-height: 760px) and (min-width: 801px) {
-
-    .hero-section {
-        padding-top: 8px;
-        padding-bottom: 0;
-    }
-
-    .hero-wrap {
-        width: min(1020px, 84%);
-    }
-
+	.hero-section {
+		padding-top: 8px;
+		padding-bottom: 0;
+	}
+	.hero-wrap {
+		width: min(1020px, 84%);
+	}
 }
-
-
-
-/* =========================================================
-   MAIN
-========================================================= */
-
+/* =========================================================MAIN========================================================= */
 .site-main {
-
-    width:
-        100%;
-
+	width: 100%;
 }
-
-
 .content-section {
-
-    width:
-        min(92%, var(--max));
-
-    margin:
-        auto;
-
-    padding:
-        70px 0;
-
+	width:min(92%, var(--max));
+	margin: auto;
+	padding: 70px 0;
 }
-
-
-
-/* =========================================================
-   ABOUT IMAGE HEADER
-========================================================= */
-
+/* =========================================================ABOUT IMAGE HEADER========================================================= */
 .section-heading-image {
-
-    width:
-        min(900px, 94%);
-
-    margin:
-        0 auto 36px;
-
+	width:min(900px, 94%);
+	margin: 0 auto 36px;
 }
-
-
-
-/* =========================================================
-   TEXT HEADINGS
-========================================================= */
-
+/* =========================================================TEXT HEADINGS========================================================= */
 .text-heading {
-
-    text-align:
-        center;
-
-    margin-bottom:
-        38px;
-
+	text-align: center;
+	margin-bottom: 38px;
 }
-
-
 .text-heading h2 {
-
-    margin:
-        0;
-
-    color:
-        var(--gold-bright);
-
-    font-size:
-        clamp(2rem, 4vw, 3.25rem);
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        0.06em;
-
-    text-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.9);
-
+	margin: 0;
+	color: var(--gold-bright);
+	font-size:clamp(2rem, 4vw, 3.25rem);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
 }
-
-
 .text-heading p {
-
-    max-width:
-        680px;
-
-    margin:
-        12px auto 0;
-
-    color:
-        var(--muted);
-
+	max-width: 680px;
+	margin: 12px auto 0;
+	color: var(--muted);
 }
-
-
-
-/* =========================================================
-   SMALL GEM DIVIDER
-========================================================= */
-
+/* =========================================================SMALL GEM DIVIDER========================================================= */
 .simple-gem-divider {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    width:
-        min(650px, 80%);
-
-    margin:
-        18px auto 0;
-
-    gap:
-        18px;
-
+	display: flex;
+	align-items: center;
+	width:min(650px, 80%);
+	margin: 18px auto 0;
+	gap: 18px;
 }
-
-
-.simple-gem-divider::before,
+.simple-gem-divider::before,.simple-gem-divider::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background:linear-gradient(90deg,transparent,var(--gold));
+}
 .simple-gem-divider::after {
-
-    content:
-        "";
-
-    flex:
-        1;
-
-    height:
-        1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold)
-        );
-
+	background:linear-gradient(90deg,var(--gold),transparent);
 }
-
-
-.simple-gem-divider::after {
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--gold),
-            transparent
-        );
-
-}
-
-
 .simple-gem-divider span {
-
-    width:
-        13px;
-
-    height:
-        13px;
-
-    background:
-        #931b18;
-
-    border:
-        1px solid #dc604a;
-
-    transform:
-        rotate(45deg);
-
-    box-shadow:
-        0 0 12px rgba(190, 28, 22, 0.7);
-
+	width: 13px;
+	height: 13px;
+	background: #931b18;
+	border: 1px solid #dc604a;
+	transform: rotate(45deg);
+	box-shadow: 0 0 12px rgba(190, 28, 22, 0.7);
 }
-
-
-
-/* =========================================================
-   STONE PANELS
-========================================================= */
-
+/* =========================================================STONE PANELS========================================================= */
 .stone-panel {
-
-    position:
-        relative;
-
-    padding:
-        40px 46px;
-
-    background:
-
-        linear-gradient(
-            rgba(10, 10, 9, 0.93),
-            rgba(5, 5, 4, 0.95)
-        );
-
-    border:
-        1px solid rgba(164, 132, 66, 0.72);
-
-    box-shadow:
-
-        inset 0 0 0 3px
-        rgba(180, 145, 72, 0.06),
-
-        inset 0 0 35px
-        rgba(0, 0, 0, 0.95),
-
-        0 12px 35px
-        rgba(0, 0, 0, 0.5);
-
+	position: relative;
+	padding: 40px 46px;
+	background:linear-gradient(rgba(10, 10, 9, 0.93),rgba(5, 5, 4, 0.95));
+	border: 1px solid rgba(164, 132, 66, 0.72);
+	box-shadow:inset 0 0 0 3pxrgba(180, 145, 72, 0.06),inset 0 0 35pxrgba(0, 0, 0, 0.95),0 12px 35pxrgba(0, 0, 0, 0.5);
 }
-
-
 .stone-panel::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        8px;
-
-    border:
-        1px solid rgba(169, 134, 67, 0.28);
-
-    pointer-events:
-        none;
-
+	content: "";
+	position: absolute;
+	inset: 8px;
+	border: 1px solid rgba(169, 134, 67, 0.28);
+	pointer-events: none;
 }
-
-
-.stone-panel h2,
-.stone-panel h3 {
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-    color:
-        var(--gold-bright);
-
-    margin-top:
-        0;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        0.05em;
-
+.stone-panel h2,.stone-panel h3 {
+	position: relative;
+	z-index: 2;
+	color: var(--gold-bright);
+	margin-top: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
-
-
 .stone-panel p {
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-    color:
-        #d8cebb;
-
+	position: relative;
+	z-index: 2;
+	color: #d8cebb;
 }
-
-
-
-/* =========================================================
-   REUSABLE CORNER ASSET
-========================================================= */
-
+/* =========================================================PANEL BORDER ASSETS========================================================= */
+.panel-corner,.panel-edge {
+	position: absolute;
+	pointer-events: none;
+	z-index: 5;
+}
 .panel-corner {
-
-    position:
-        absolute;
-
-    width:
-        54px;
-
-    height:
-        54px;
-
-    background-image:
-        url("../images/single-corner.png");
-
-    background-size:
-        contain;
-
-    background-position:
-        center;
-
-    background-repeat:
-        no-repeat;
-
-    pointer-events:
-        none;
-
-    z-index:
-        5;
-
+	width: 54px;
+	height: 54px;
+	background: url("../images/single-corner.png") center / contain no-repeat;
 }
-
-
 .corner-tl {
-
-    top:
-        -7px;
-
-    left:
-        -7px;
-
+	top: -7px;
+	left: -7px;
 }
-
-
 .corner-tr {
-
-    top:
-        -7px;
-
-    right:
-        -7px;
-
-    transform:
-        rotate(90deg);
-
+	top: -7px;
+	right: -7px;
+	transform: rotate(90deg);
 }
-
-
 .corner-br {
-
-    bottom:
-        -7px;
-
-    right:
-        -7px;
-
-    transform:
-        rotate(180deg);
-
+	bottom: -7px;
+	right: -7px;
+	transform: rotate(180deg);
 }
-
-
 .corner-bl {
-
-    bottom:
-        -7px;
-
-    left:
-        -7px;
-
-    transform:
-        rotate(270deg);
-
+	bottom: -7px;
+	left: -7px;
+	transform: rotate(270deg);
 }
-
-
-
-/* =========================================================
-   MAJOR DIVIDER
-========================================================= */
-
+/* Straight border asset */
+.panel-edge {
+	background: url("../images/border-straight.png") center / 100% 100% no-repeat;
+	z-index: 4;
+}
+.edge-top,.edge-bottom {
+	left: 40px;
+	right: 40px;
+	height: 18px;
+}
+.edge-top {
+	top: -4px;
+}
+.edge-bottom {
+	bottom: -4px;
+	transform: rotate(180deg);
+}
+.edge-left,.edge-right {
+	top: 40px;
+	bottom: 40px;
+	width: 18px;
+	background-size: 100% 100%;
+}
+.edge-left {
+	left: -4px;
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+}
+.edge-right {
+	right: -4px;
+	transform: rotate(180deg);
+}
+/* Use the horizontal border image vertically by rotating the element */
+.edge-left,.edge-right {
+	background-image: none;
+	overflow: hidden;
+}
+.edge-left::before,.edge-right::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: calc(100vh);
+	min-width: 400px;
+	height: 18px;
+	background: url("../images/border-straight.png") center / 100% 100% no-repeat;
+	transform-origin: center;
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+/* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
-
-    width:
-        min(1350px, 96%);
-
-    margin:
-        5px auto;
-
+	width:min(1350px, 96%);
+	margin: 5px auto;
 }
-
-
 .major-divider img {
-
-    width:
-        100%;
-
-    height:
-        auto;
-
+	width: 100%;
+	height: auto;
 }
-
-
-
-/* =========================================================
-   FEATURE CARDS
-========================================================= */
-
+/* =========================================================FEATURE CARDS========================================================= */
 .feature-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap:
-        30px;
-
+	display: grid;
+	grid-template-columns:repeat(3, minmax(0, 1fr));
+	gap: 30px;
 }
-
-
 .feature-panel {
-
-    text-align:
-        center;
-
-    min-height:
-        245px;
-
+	text-align: center;
+	min-height: 245px;
 }
-
-
 .feature-panel h3 {
-
-    font-size:
-        1.35rem;
-
+	font-size: 1.35rem;
 }
-
-
-
-/* =========================================================
-   OLD SEBILIS WIDE LOGO DIVIDER
-========================================================= */
-
+/* =========================================================OLD SEBILIS WIDE LOGO DIVIDER========================================================= */
 .name-divider {
-
-    width:
-        min(900px, 85%);
-
-    margin:
-        20px auto 0;
-
+	width:min(900px, 85%);
+	margin: 20px auto 0;
 }
-
-
 .name-divider img {
-
-    width:
-        100%;
-
-    height:
-        auto;
-
+	width: 100%;
+	height: auto;
 }
-
-
-
-/* =========================================================
-   JOIN SECTION
-========================================================= */
-
+/* =========================================================JOIN SECTION========================================================= */
 .join-section {
-
-    text-align:
-        center;
-
+	text-align: center;
 }
-
-
 .action-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap:
-        38px;
-
-    align-items:
-        center;
-
-    width:
-        min(1000px, 100%);
-
-    margin:
-        auto;
-
+	display: grid;
+	grid-template-columns:repeat(2, minmax(0, 1fr));
+	gap: 38px;
+	align-items: center;
+	width:min(1000px, 100%);
+	margin: auto;
 }
-
-
 .graphic-button {
-
-    display:
-        block;
-
-    transition:
-        transform 0.2s ease,
-        filter 0.2s ease;
-
+	display: block;
+	transition:transform 0.2s ease,filter 0.2s ease;
 }
-
-
 .graphic-button:hover {
-
-    transform:
-        translateY(-4px)
-        scale(1.015);
-
-    filter:
-        brightness(1.12);
-
+	transform:translateY(-4px)scale(1.015);
+	filter: brightness(1.12);
 }
-
-
 .graphic-button img {
-
-    width:
-        100%;
-
+	width: 100%;
 }
-
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
+/* =========================================================FOOTER========================================================= */
 .site-footer {
-
-    margin-top:
-        50px;
-
-    padding:
-        45px 20px;
-
-    text-align:
-        center;
-
-    background:
-        rgba(4, 4, 4, 0.72);
-
-    border-top:
-        1px solid rgba(164, 132, 66, 0.4);
-
-    color:
-        var(--muted);
-
+	margin-top: 50px;
+	padding: 45px 20px;
+	text-align: center;
+	background:rgba(4, 4, 4, 0.72);
+	border-top: 1px solid rgba(164, 132, 66, 0.4);
+	color: var(--muted);
 }
-
-
 .footer-logo {
-
-    width:
-        min(450px, 70%);
-
-    margin:
-        0 auto 15px;
-
+	width:min(450px, 70%);
+	margin: 0 auto 15px;
 }
-
-
 .site-footer p {
-
-    margin:
-        5px 0;
-
+	margin: 5px 0;
 }
-
-
 .copyright {
-
-    font-size:
-        0.85rem;
-
-    opacity:
-        0.75;
-
+	font-size: 0.85rem;
+	opacity: 0.75;
 }
-
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media
-(max-width: 800px) {
-
-
-    .nav-wrap {
-
-        flex-direction:
-            column;
-
-        align-items:
-            center;
-
-        gap:
-            10px;
-
-        padding:
-            14px 0;
-
-    }
-
-
-    .site-nav {
-
-        justify-content:
-            center;
-
-        gap:
-            14px;
-
-        flex-wrap:
-            wrap;
-
-    }
-
-
-    .hero-section {
-
-        padding:
-            15px 5px;
-
-    }
-
-
-    .hero-wrap {
-
-        width:
-            100%;
-
-    }
-
-
-    .content-section {
-
-        width:
-            90%;
-
-        padding:
-            48px 0;
-
-    }
-
-
-    .stone-panel {
-
-        padding:
-            34px 28px;
-
-    }
-
-
-    .feature-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .action-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            24px;
-
-    }
-
-
-    .panel-corner {
-
-        width:
-            44px;
-
-        height:
-            44px;
-
-    }
-
-
-    .section-heading-image {
-
-        width:
-            100%;
-
-    }
-
-
-    .major-divider {
-
-        width:
-            100%;
-
-    }
-
-
+/* =========================================================MOBILE========================================================= */
+@media(max-width: 800px) {
+	.nav-wrap {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		padding: 14px 0;
+	}
+	.site-nav {
+		justify-content: center;
+		gap: 14px;
+		flex-wrap: wrap;
+	}
+	.hero-section {
+		padding: 15px 5px;
+	}
+	.hero-wrap {
+		width: 100%;
+	}
+	.content-section {
+		width: 90%;
+		padding: 48px 0;
+	}
+	.stone-panel {
+		padding: 34px 28px;
+	}
+	.feature-grid {
+		grid-template-columns: 1fr;
+	}
+	.action-grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+	.panel-corner {
+		width: 44px;
+		height: 44px;
+	}
+	.section-heading-image {
+		width: 100%;
+	}
+	.major-divider {
+		width: 100%;
+	}
 }
-
-
-
-/* =========================================================
-   VERY SMALL SCREENS
-========================================================= */
-
-@media
-(max-width: 480px) {
-
-
-    .site-nav {
-
-        font-size:
-            0.86rem;
-
-    }
-
-
-    .stone-panel {
-
-        padding:
-            30px 22px;
-
-    }
-
-
-    .text-heading h2 {
-
-        font-size:
-            1.8rem;
-
-    }
-
-
+/* =========================================================VERY SMALL SCREENS========================================================= */
+@media(max-width: 480px) {
+	.site-nav {
+		font-size: 0.86rem;
+	}
+	.stone-panel {
+		padding: 30px 22px;
+	}
+	.text-heading h2 {
+		font-size: 1.8rem;
+	}
+}
+/* Smaller border assets on mobile */
+@media (max-width: 800px) {
+	.panel-corner {
+		width: 44px;
+		height: 44px;
+	}
+	.edge-top,.edge-bottom {
+		left: 32px;
+		right: 32px;
+	}
+	.edge-left,.edge-right {
+		top: 32px;
+		bottom: 32px;
+	}
 }
