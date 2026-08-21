@@ -206,79 +206,117 @@ a {
 	z-index: 2;
 	color: #d8cebb;
 }
-/* =========================================================PANEL BORDER ASSETS========================================================= */
-.panel-corner,.panel-edge {
-	position: absolute;
-	pointer-events: none;
-}
-/* =========================================================CORNERS========================================================= */
-.panel-corner {
-	width: 54px;
-	height: 54px;
-	background:url("../images/single-corner.png")center / containno-repeat;
-	z-index: 6;
-}
-.corner-tl {
-	top: -7px;
-	left: -7px;
-}
-.corner-tr {
-	top: -7px;
-	right: -7px;
-	transform: rotate(90deg);
-}
-.corner-br {
-	bottom: -7px;
-	right: -7px;
-	transform: rotate(180deg);
-}
-.corner-bl {
-	bottom: -7px;
-	left: -7px;
-	transform: rotate(270deg);
-}
-/* =========================================================STRAIGHT BORDER ASSET========================================================= */
+/* =========================================================
+   PANEL BORDER ASSETS
+========================================================= */
+
+.panel-corner,
 .panel-edge {
-	z-index: 5;
+    position: absolute;
+    pointer-events: none;
 }
+
+/* =========================================================
+   CORNERS
+========================================================= */
+
+.panel-corner {
+    width: 54px;
+    height: 54px;
+    background-image: url("../images/single-corner.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 6;
+}
+
+.corner-tl {
+    top: -7px;
+    left: -7px;
+}
+
+.corner-tr {
+    top: -7px;
+    right: -7px;
+    transform: rotate(90deg);
+}
+
+.corner-br {
+    bottom: -7px;
+    right: -7px;
+    transform: rotate(180deg);
+}
+
+.corner-bl {
+    bottom: -7px;
+    left: -7px;
+    transform: rotate(270deg);
+}
+
+/* =========================================================
+   STRAIGHT BORDER ASSET
+========================================================= */
+
+.panel-edge {
+    z-index: 5;
+}
+
 /* TOP / BOTTOM */
-.edge-top,.edge-bottom {
-	left: 40px;
-	right: 40px;
-	height: 18px;
-	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
-}
-.edge-top {
-	top: -4px;
-}
+
+.edge-top,
 .edge-bottom {
-	bottom: -4px;
-	transform: rotate(180deg);
+    left: 40px;
+    right: 40px;
+    height: 18px;
+    background-image: url("../images/border-straight.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
+
+.edge-top {
+    top: -4px;
+}
+
+.edge-bottom {
+    bottom: -4px;
+    transform: rotate(180deg);
+}
+
 /* LEFT / RIGHT */
-.edge-left,.edge-right {
-	top: 40px;
-	bottom: 40px;
-	width: 18px;
-	overflow: hidden;
-}
-.edge-left {
-	left: -4px;
-}
+
+.edge-left,
 .edge-right {
-	right: -4px;
+    top: 40px;
+    bottom: 40px;
+    width: 18px;
+    overflow: hidden;
 }
-/* ROTATE STRAIGHT BORDER VERTICALLY */
-.edge-left::before,.edge-right::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 1000px;
-	height: 18px;
-	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
-	transform-origin: center;
-	transform:translate(-50%, -50%)rotate(90deg);
+
+.edge-left {
+    left: -4px;
+}
+
+.edge-right {
+    right: -4px;
+}
+
+/* Rotate the straight border artwork vertically */
+
+.edge-left::before,
+.edge-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 18px;
+    background-image: url("../images/border-straight.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 /* =========================================================MAJOR DIVIDER========================================================= */
@@ -344,7 +382,7 @@ a {
 	transition:transform 0.2s ease,filter 0.2s ease;
 }
 .graphic-button:hover {
-	transform:translateY(-4px)scale(1.015);
+	transform: translateY(-4px) scale(1.015);
 	filter:brightness(1.12);
 }
 .graphic-button img {
