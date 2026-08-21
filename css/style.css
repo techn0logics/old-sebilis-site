@@ -180,32 +180,26 @@ a {
 }
 /* =========================================================STONE PANELS========================================================= */
 .stone-panel {
-	position: relative;
-	padding:40px 46px;
-	background:linear-gradient(rgba(10, 10, 9, 0.93),rgba(5, 5, 4, 0.95));
-	border:1px solid rgba(164, 132, 66, 0.72);
-	box-shadow:inset 0 0 0 3px rgba(180, 145, 72, 0.06),inset 0 0 35px rgba(0, 0, 0, 0.95),0 12px 35px rgba(0, 0, 0, 0.5);
-}
-.stone-panel::before {
-	content: "";
-	position: absolute;
-	inset: 8px;
-	border:1px solid rgba(169, 134, 67, 0.28);
-	pointer-events: none;
+    position: relative;
+    padding: 40px 46px;
+    background:linear-gradient(rgba(10, 10, 9, 0.93),rgba(5, 5, 4, 0.95));
+    border: 2px solid var(--gold);
+    box-shadow:inset 0 0 35px rgba(0, 0, 0, 0.95),0 12px 35px rgba(0, 0, 0, 0.5);
 }
 .stone-panel h2,.stone-panel h3 {
-	position: relative;
-	z-index: 2;
-	color: var(--gold-bright);
-	margin-top: 0;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+    position: relative;
+    z-index: 2;
+    color: var(--gold-bright);
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 .stone-panel p {
-	position: relative;
-	z-index: 2;
-	color: #d8cebb;
+    position: relative;
+    z-index: 2;
+    color: #d8cebb;
 }
+​
 /* =========================================================PANEL BORDER ASSETS========================================================= */
 .panel-corner,.panel-edge {
     position: absolute;
