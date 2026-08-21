@@ -206,53 +206,81 @@ a {
 	z-index: 2;
 	color: #d8cebb;
 }
-/* =========================================================PANEL BORDER ASSETS - SIZE MATCHING========================================================= */
+/* =========================================================PANEL BORDER ASSETS========================================================= */
 .panel-corner,.panel-edge {
-    position: absolute;
-    pointer-events: none;
+	position: absolute;
+	pointer-events: none;
 }
 /* =========================================================CORNERS========================================================= */
 .panel-corner {
-    width: 48px;
-    height: 48px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 6;
+	width: 54px;
+	height: 54px;
+	background:url("../images/single-corner.png")center / containno-repeat;
+	z-index: 6;
 }
 .corner-tl {
-    top: -3px;
-    left: -3px;
-    background-image:url("../images/top-left.png");
+	top: -7px;
+	left: -7px;
 }
 .corner-tr {
-    top: -3px;
-    right: -3px;
-    background-image:url("../images/top-right.png");
-}
-.corner-bl {
-    bottom: -3px;
-    left: -3px;
-    background-image:url("../images/bottom-left.png");
+	top: -7px;
+	right: -7px;
+	transform: rotate(90deg);
 }
 .corner-br {
-    bottom: -3px;
-    right: -3px;
-    background-image:url("../images/bottom-right.png");
+	bottom: -7px;
+	right: -7px;
+	transform: rotate(180deg);
 }
-/* =========================================================TOP / BOTTOM BORDER========================================================= */
+.corner-bl {
+	bottom: -7px;
+	left: -7px;
+	transform: rotate(270deg);
+}
+/* =========================================================STRAIGHT BORDER ASSET========================================================= */
+.panel-edge {
+	z-index: 5;
+}
+/* TOP / BOTTOM */
 .edge-top,.edge-bottom {
-    left: 38px;
-    right: 38px;
-    height: 18px;
-    background-image:url("../images/border-straight.png");
-    background-repeat: repeat-x;
-    background-size: auto 18px;
-    z-index: 5;
+	left: 40px;
+	right: 40px;
+	height: 18px;
+	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
 }
 .edge-top {
-    top: -1px;
+	top: -4px;
 }
+.edge-bottom {
+	bottom: -4px;
+	transform: rotate(180deg);
+}
+/* LEFT / RIGHT */
+.edge-left,.edge-right {
+	top: 40px;
+	bottom: 40px;
+	width: 18px;
+	overflow: hidden;
+}
+.edge-left {
+	left: -4px;
+}
+.edge-right {
+	right: -4px;
+}
+/* ROTATE STRAIGHT BORDER VERTICALLY */
+.edge-left::before,.edge-right::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1000px;
+	height: 18px;
+	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
+	transform-origin: center;
+	transform:translate(-50%, -50%)rotate(90deg);
+}
+
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
     width: min(900px, 82%);
