@@ -558,3 +558,27 @@ a {
     }
 
 }
+
+/* Larger policy/body text */
+
+.stone-panel p,
+.conduct-list li {
+    font-size: 1.12rem;
+    line-height: 1.8;
+}
+
+.stone-panel h2 {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 800px) {
+    .stone-panel p,
+    .conduct-list li {
+        font-size: 1.05rem;
+        line-height: 1.75;
+    }
+
+    .stone-panel h2 {
+        font-size: 1.55rem;
+    }
+}
