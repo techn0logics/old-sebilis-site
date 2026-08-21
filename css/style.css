@@ -293,6 +293,41 @@ a {
 
 }
 
+/* =========================================================
+   SHORTER LAPTOP SCREENS
+========================================================= */
+
+@media (max-height: 900px) and (min-width: 801px) {
+
+    .hero-section {
+        padding-top: 12px;
+        padding-bottom: 4px;
+    }
+
+    .hero-wrap {
+        width: min(1180px, 90%);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SHORT LAPTOP SCREENS
+========================================================= */
+
+@media (max-height: 760px) and (min-width: 801px) {
+
+    .hero-section {
+        padding-top: 8px;
+        padding-bottom: 0;
+    }
+
+    .hero-wrap {
+        width: min(1020px, 84%);
+    }
+
+}
+
 
 
 /* =========================================================
