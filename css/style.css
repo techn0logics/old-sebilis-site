@@ -210,74 +210,80 @@ a {
 .panel-corner,.panel-edge {
 	position: absolute;
 	pointer-events: none;
-	z-index: 5;
 }
-/* CORNERS */
+/* =========================================================CORNERS========================================================= */
 .panel-corner {
-	width: 54px;
-	height: 54px;
-	background:url("../images/single-corner.png")center / containno-repeat;
+	width: 72px;
+	height: 72px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 6;
 }
 .corner-tl {
-	top: -7px;
-	left: -7px;
+	top: -5px;
+	left: -5px;
+	background-image:url("../images/top-left.png");
 }
 .corner-tr {
-	top: -7px;
-	right: -7px;
-	transform:rotate(90deg);
-}
-.corner-br {
-	bottom: -7px;
-	right: -7px;
-	transform:rotate(180deg);
+	top: -5px;
+	right: -5px;
+	background-image:url("../images/top-right.png");
 }
 .corner-bl {
-	bottom: -7px;
-	left: -7px;
-	transform:rotate(270deg);
+	bottom: -5px;
+	left: -5px;
+	background-image:url("../images/bottom-left.png");
+}
+.corner-br {
+	bottom: -5px;
+	right: -5px;
+	background-image:url("../images/bottom-right.png");
 }
 /* =========================================================STRAIGHT BORDER ASSET========================================================= */
 .panel-edge {
-	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
-	z-index: 4;
+	z-index: 5;
 }
 /* TOP / BOTTOM */
 .edge-top,.edge-bottom {
-	left: 40px;
-	right: 40px;
-	height: 18px;
+	left: 55px;
+	right: 55px;
+	height: 24px;
+	background-image:url("../images/border-straight.png");
+	background-repeat: repeat-x;
+	background-size: auto 24px;
 }
 .edge-top {
-	top: -4px;
+	top: -2px;
 }
 .edge-bottom {
-	bottom: -4px;
-	transform:rotate(180deg);
+	bottom: -2px;
+	transform: rotate(180deg);
 }
 /* LEFT / RIGHT */
 .edge-left,.edge-right {
-	top: 40px;
-	bottom: 40px;
-	width: 18px;
-	background-image: none;
+	top: 55px;
+	bottom: 55px;
+	width: 24px;
 	overflow: hidden;
 }
 .edge-left {
-	left: -4px;
+	left: -2px;
 }
 .edge-right {
-	right: -4px;
+	right: -2px;
 }
-/*Rotate the horizontal border artwork vertically*/
+/* Rotate the horizontal border artwork vertically */
 .edge-left::before,.edge-right::before {
 	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 1000px;
-	height: 18px;
-	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
+	height: 24px;
+	background-image:url("../images/border-straight.png");
+	background-repeat: repeat-x;
+	background-size: auto 24px;
 	transform-origin: center;
 	transform:translate(-50%, -50%)rotate(90deg);
 }
