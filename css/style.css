@@ -289,8 +289,8 @@ a {
 }
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
-	width:min(900px, 82%);
-	margin:10px auto;
+    width: min(900px, 82%);
+    margin: 10px auto 0;
 }
 .major-divider img {
 	width: 100%;
@@ -334,7 +334,8 @@ a {
 }
 /* =========================================================JOIN SECTION========================================================= */
 .join-section {
-	text-align: center;
+    text-align: center;
+    padding-top: 10px;
 }
 .action-grid {
 	display: grid;
