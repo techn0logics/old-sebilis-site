@@ -639,3 +639,132 @@ a {
 		font-size: 1.1rem;
 	}
 }
+
+/* =========================================================
+   RESOURCES PAGE
+========================================================= */
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+.resource-card {
+    min-height: 315px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 32px 28px;
+}
+
+.resource-card h2 {
+    margin: 0 0 16px;
+
+    color: var(--gold-bright);
+
+    font-size:
+        clamp(1.15rem, 1.4vw, 1.45rem);
+
+    line-height: 1.25;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+.resource-card p {
+    margin: 0 0 14px;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+.resource-best-for {
+    margin-top: auto !important;
+
+    padding-top: 10px;
+
+    color: #cfc5b2;
+}
+
+.resource-best-for strong {
+    color: var(--gold-bright);
+}
+
+.resource-card .policy-button {
+    align-self: center;
+
+    margin-top: 16px;
+
+    padding: 10px 18px;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   RESOURCE PAGE CLOSING NOTE
+========================================================= */
+
+.resources-note {
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+.resources-note p {
+    max-width: 850px;
+
+    margin: 26px auto 0;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESOURCES - TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .resource-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESOURCES - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+    .resource-card {
+        min-height: auto;
+
+        padding: 30px 24px;
+    }
+
+}
