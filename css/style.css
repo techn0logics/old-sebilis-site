@@ -242,10 +242,11 @@ a {
 }
 /* =========================================================TOP / BOTTOM BORDER========================================================= */
 .edge-top,.edge-bottom {
-    left: 42px;
-    right: 42px;
+    left: 40px;
+    right: 40px;
     height: 18px;
     background-image: url("../images/border-straight.png");
+    background-position: center;
     background-repeat: repeat-x;
     background-size: auto 18px;
     z-index: 5;
@@ -253,7 +254,6 @@ a {
 .edge-top {
     top: -4px;
 }
-
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
     width: min(900px, 82%);
