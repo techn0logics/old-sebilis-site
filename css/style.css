@@ -200,48 +200,38 @@ a {
     color: #d8cebb;
 }
 
-/* =========================================================
-   PANEL CORNERS
-========================================================= */
-
+/* =========================================================PANEL CORNERS========================================================= */
 .panel-corner {
-    position: absolute;
-
-    width: 120px;
-    height: 120px;
-
-    object-fit: contain;
-
-    pointer-events: none;
-
-    z-index: 10;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background-image: url("../images/single-corner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	pointer-events: none;
+	z-index: 10;
 }
-
 .corner-tl {
-    top: -10px;
-    left: -10px;
+	top: -8px;
+	left: -8px;
 }
-
 .corner-tr {
-    top: -10px;
-    right: -10px;
-
-    transform: rotate(90deg);
+	top: -8px;
+	right: -8px;
+	transform: rotate(90deg);
 }
-
 .corner-br {
-    bottom: -10px;
-    right: -10px;
-
-    transform: rotate(180deg);
+	bottom: -8px;
+	right: -8px;
+	transform: rotate(180deg);
 }
-
 .corner-bl {
-    bottom: -10px;
-    left: -10px;
-
-    transform: rotate(270deg);
+	bottom: -8px;
+	left: -8px;
+	transform: rotate(270deg);
 }
+
 
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
