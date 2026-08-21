@@ -200,54 +200,52 @@ a {
     color: #d8cebb;
 }
 ​
-/* =========================================================PANEL BORDER ASSETS========================================================= */
-.panel-corner,.panel-edge {
-    position: absolute;
-    pointer-events: none;
-}
-/* =========================================================CORNERS========================================================= */
+/* =========================================================
+   PANEL CORNERS
+========================================================= */
+
 .panel-corner {
+    position: absolute;
+
     width: 54px;
     height: 54px;
+
     background-image: url("../images/single-corner.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    pointer-events: none;
+
     z-index: 6;
 }
+
 .corner-tl {
-    top: -7px;
-    left: -7px;
+    top: -8px;
+    left: -8px;
 }
+
 .corner-tr {
-    top: -7px;
-    right: -7px;
+    top: -8px;
+    right: -8px;
+
     transform: rotate(90deg);
 }
+
 .corner-br {
-    bottom: -7px;
-    right: -7px;
+    bottom: -8px;
+    right: -8px;
+
     transform: rotate(180deg);
 }
+
 .corner-bl {
-    bottom: -7px;
-    left: -7px;
+    bottom: -8px;
+    left: -8px;
+
     transform: rotate(270deg);
 }
-/* =========================================================TOP / BOTTOM BORDER========================================================= */
-.edge-top,.edge-bottom {
-    left: 40px;
-    right: 40px;
-    height: 18px;
-    background-image: url("../images/border-straight.png");
-    background-position: center;
-    background-repeat: repeat-x;
-    background-size: auto 18px;
-    z-index: 5;
-}
-.edge-top {
-    top: -4px;
-}
+
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
     width: min(900px, 82%);
@@ -404,14 +402,6 @@ a {
 	.panel-corner {
 		width: 44px;
 		height: 44px;
-	}
-	.edge-top,.edge-bottom {
-		left: 32px;
-		right: 32px;
-	}
-	.edge-left,.edge-right {
-		top: 32px;
-		bottom: 32px;
 	}
 	.section-heading-image {
 		width: 100%;
