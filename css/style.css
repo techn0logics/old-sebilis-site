@@ -1,7 +1,7 @@
 /* =========================================================VARIABLES========================================================= */
 :root {
 	--bg: #080807;
-	--panel:rgba(8, 8, 7, 0.92);
+	--panel: rgba(8, 8, 7, 0.92);
 	--text: #e3d8c4;
 	--muted: #aaa08e;
 	--gold: #c8a75d;
@@ -39,13 +39,13 @@ a {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background:rgba(5, 5, 5, 0.94);
-	border-bottom: 1px solid rgba(189, 153, 78, 0.3);
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.55);
+	background: rgba(5, 5, 5, 0.94);
+	border-bottom:1px solid rgba(189, 153, 78, 0.3);
+	box-shadow:0 5px 20px rgba(0, 0, 0, 0.55);
 	backdrop-filter: blur(8px);
 }
 .nav-wrap {
-	width:min(94%, var(--max));
+	width: min(94%, var(--max));
 	margin: auto;
 	min-height: 72px;
 	display: flex;
@@ -71,7 +71,7 @@ a {
 	text-decoration: none;
 	font-size: 0.95rem;
 	letter-spacing: 0.04em;
-	transition: color 0.2s ease;
+	transition:color 0.2s ease;
 }
 .site-nav a:hover,.site-nav a.active {
 	color: var(--gold-bright);
@@ -88,7 +88,7 @@ a {
 /* =========================================================HERO========================================================= */
 .hero-section {
 	width: 100%;
-	padding: 30px 18px 10px;
+	padding:30px 18px 10px;
 }
 .hero-wrap {
 	width:min(1600px, 98%);
@@ -98,7 +98,7 @@ a {
 	width: 80%;
 	height: auto;
 	margin: auto;
-	box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+	box-shadow:0 18px 60px rgba(0, 0, 0, 0.55);
 }
 /* =========================================================SHORTER LAPTOP SCREENS========================================================= */
 @media (max-height: 900px) and (min-width: 801px) {
@@ -107,7 +107,7 @@ a {
 		padding-bottom: 4px;
 	}
 	.hero-wrap {
-		width: min(1180px, 90%);
+		width:min(1180px, 90%);
 	}
 }
 /* =========================================================VERY SHORT LAPTOP SCREENS========================================================= */
@@ -117,7 +117,7 @@ a {
 		padding-bottom: 0;
 	}
 	.hero-wrap {
-		width: min(1020px, 84%);
+		width:min(1020px, 84%);
 	}
 }
 /* =========================================================MAIN========================================================= */
@@ -127,12 +127,12 @@ a {
 .content-section {
 	width:min(92%, var(--max));
 	margin: auto;
-	padding: 70px 0;
+	padding:70px 0;
 }
 /* =========================================================ABOUT IMAGE HEADER========================================================= */
 .section-heading-image {
 	width:min(900px, 94%);
-	margin: 0 auto 36px;
+	margin:0 auto 36px;
 }
 /* =========================================================TEXT HEADINGS========================================================= */
 .text-heading {
@@ -145,11 +145,11 @@ a {
 	font-size:clamp(2rem, 4vw, 3.25rem);
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
-	text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
+	text-shadow:0 3px 6px rgba(0, 0, 0, 0.9);
 }
 .text-heading p {
 	max-width: 680px;
-	margin: 12px auto 0;
+	margin:12px auto 0;
 	color: var(--muted);
 }
 /* =========================================================SMALL GEM DIVIDER========================================================= */
@@ -157,7 +157,7 @@ a {
 	display: flex;
 	align-items: center;
 	width:min(650px, 80%);
-	margin: 18px auto 0;
+	margin:18px auto 0;
 	gap: 18px;
 }
 .simple-gem-divider::before,.simple-gem-divider::after {
@@ -173,23 +173,23 @@ a {
 	width: 13px;
 	height: 13px;
 	background: #931b18;
-	border: 1px solid #dc604a;
-	transform: rotate(45deg);
-	box-shadow: 0 0 12px rgba(190, 28, 22, 0.7);
+	border:1px solid #dc604a;
+	transform:rotate(45deg);
+	box-shadow:0 0 12px rgba(190, 28, 22, 0.7);
 }
 /* =========================================================STONE PANELS========================================================= */
 .stone-panel {
 	position: relative;
-	padding: 40px 46px;
+	padding:40px 46px;
 	background:linear-gradient(rgba(10, 10, 9, 0.93),rgba(5, 5, 4, 0.95));
-	border: 1px solid rgba(164, 132, 66, 0.72);
-	box-shadow:inset 0 0 0 3pxrgba(180, 145, 72, 0.06),inset 0 0 35pxrgba(0, 0, 0, 0.95),0 12px 35pxrgba(0, 0, 0, 0.5);
+	border:1px solid rgba(164, 132, 66, 0.72);
+	box-shadow:inset 0 0 0 3px rgba(180, 145, 72, 0.06),inset 0 0 35px rgba(0, 0, 0, 0.95),0 12px 35px rgba(0, 0, 0, 0.5);
 }
 .stone-panel::before {
 	content: "";
 	position: absolute;
 	inset: 8px;
-	border: 1px solid rgba(169, 134, 67, 0.28);
+	border:1px solid rgba(169, 134, 67, 0.28);
 	pointer-events: none;
 }
 .stone-panel h2,.stone-panel h3 {
@@ -211,10 +211,11 @@ a {
 	pointer-events: none;
 	z-index: 5;
 }
+/* CORNERS */
 .panel-corner {
 	width: 54px;
 	height: 54px;
-	background: url("../images/single-corner.png") center / contain no-repeat;
+	background:url("../images/single-corner.png")center / containno-repeat;
 }
 .corner-tl {
 	top: -7px;
@@ -223,23 +224,24 @@ a {
 .corner-tr {
 	top: -7px;
 	right: -7px;
-	transform: rotate(90deg);
+	transform:rotate(90deg);
 }
 .corner-br {
 	bottom: -7px;
 	right: -7px;
-	transform: rotate(180deg);
+	transform:rotate(180deg);
 }
 .corner-bl {
 	bottom: -7px;
 	left: -7px;
-	transform: rotate(270deg);
+	transform:rotate(270deg);
 }
-/* Straight border asset */
+/* =========================================================STRAIGHT BORDER ASSET========================================================= */
 .panel-edge {
-	background: url("../images/border-straight.png") center / 100% 100% no-repeat;
+	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
 	z-index: 4;
 }
+/* TOP / BOTTOM */
 .edge-top,.edge-bottom {
 	left: 40px;
 	right: 40px;
@@ -250,66 +252,74 @@ a {
 }
 .edge-bottom {
 	bottom: -4px;
-	transform: rotate(180deg);
+	transform:rotate(180deg);
 }
+/* LEFT / RIGHT */
 .edge-left,.edge-right {
 	top: 40px;
 	bottom: 40px;
 	width: 18px;
-	background-size: 100% 100%;
-}
-.edge-left {
-	left: -4px;
-	transform: rotate(180deg);
-	writing-mode: vertical-rl;
-}
-.edge-right {
-	right: -4px;
-	transform: rotate(180deg);
-}
-/* Use the horizontal border image vertically by rotating the element */
-.edge-left,.edge-right {
 	background-image: none;
 	overflow: hidden;
 }
+.edge-left {
+	left: -4px;
+}
+.edge-right {
+	right: -4px;
+}
+/*Rotate the horizontal border artwork vertically*/
 .edge-left::before,.edge-right::before {
 	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: calc(100vh);
-	min-width: 400px;
+	width: 1000px;
 	height: 18px;
-	background: url("../images/border-straight.png") center / 100% 100% no-repeat;
+	background:url("../images/border-straight.png")center / 100% 100%no-repeat;
 	transform-origin: center;
-	transform: translate(-50%, -50%) rotate(90deg);
+	transform:translate(-50%, -50%)rotate(90deg);
 }
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
-    width: min(900px, 82%);
-    margin: 10px auto;
+	width:min(900px, 82%);
+	margin:10px auto;
 }
 .major-divider img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 /* =========================================================FEATURE CARDS========================================================= */
 .feature-grid {
 	display: grid;
 	grid-template-columns:repeat(3, minmax(0, 1fr));
 	gap: 30px;
+	/*Makes all three cards the same height.*/
+	align-items: stretch;
 }
 .feature-panel {
-	text-align: center;
 	min-height: 245px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-top: 34px;
+	padding-bottom: 34px;
 }
 .feature-panel h3 {
-	font-size: 1.35rem;
+	margin:0 0 18px;
+	font-size:clamp(1.05rem, 1.35vw, 1.35rem);
+	line-height: 1.2;
+	/*Keeps "New Player Friendly" level withthe other two headings on desktop.*/
+	white-space: nowrap;
+}
+.feature-panel p {
+	margin: 0;
+	flex-grow: 1;
 }
 /* =========================================================OLD SEBILIS WIDE LOGO DIVIDER========================================================= */
 .name-divider {
 	width:min(900px, 85%);
-	margin: 20px auto 0;
+	margin:20px auto 0;
 }
 .name-divider img {
 	width: 100%;
@@ -333,7 +343,7 @@ a {
 }
 .graphic-button:hover {
 	transform:translateY(-4px)scale(1.015);
-	filter: brightness(1.12);
+	filter:brightness(1.12);
 }
 .graphic-button img {
 	width: 100%;
@@ -341,30 +351,57 @@ a {
 /* =========================================================FOOTER========================================================= */
 .site-footer {
 	margin-top: 50px;
-	padding: 45px 20px;
+	padding:45px 20px;
 	text-align: center;
 	background:rgba(4, 4, 4, 0.72);
-	border-top: 1px solid rgba(164, 132, 66, 0.4);
+	border-top:1px solid rgba(164, 132, 66, 0.4);
 	color: var(--muted);
 }
 .footer-logo {
 	width:min(450px, 70%);
-	margin: 0 auto 15px;
+	margin:0 auto 15px;
 }
 .site-footer p {
-	margin: 5px 0;
+	margin:5px 0;
+}
+.footer-tagline {
+	margin:8px 0 18px;
+}
+/* =========================================================FOOTER NAVIGATION========================================================= */
+.footer-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0;
+	margin:18px auto 22px;
+}
+.footer-nav a {
+	color: #cfc5b2;
+	text-decoration: none;
+	font-size: 0.95rem;
+	letter-spacing: 0.04em;
+	padding:0 14px;
+	border-right:1px solid rgba(198, 170, 103, 0.35);
+	transition:color 0.2s ease;
+}
+.footer-nav a:last-child {
+	border-right: 0;
+}
+.footer-nav a:hover {
+	color: var(--gold-bright);
 }
 .copyright {
 	font-size: 0.85rem;
 	opacity: 0.75;
 }
 /* =========================================================MOBILE========================================================= */
-@media(max-width: 800px) {
+@media (max-width: 800px) {
 	.nav-wrap {
 		flex-direction: column;
 		align-items: center;
 		gap: 10px;
-		padding: 14px 0;
+		padding:14px 0;
 	}
 	.site-nav {
 		justify-content: center;
@@ -372,50 +409,29 @@ a {
 		flex-wrap: wrap;
 	}
 	.hero-section {
-		padding: 15px 5px;
+		padding:15px 5px;
 	}
 	.hero-wrap {
 		width: 100%;
 	}
 	.content-section {
 		width: 90%;
-		padding: 48px 0;
+		padding:48px 0;
 	}
 	.stone-panel {
-		padding: 34px 28px;
+		padding:34px 28px;
 	}
 	.feature-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns:1fr;
+	}
+	.feature-panel h3 {
+		/*Allow longer headings to wrap againwhen the cards become single-column.*/
+		white-space: normal;
 	}
 	.action-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns:1fr;
 		gap: 24px;
 	}
-	.panel-corner {
-		width: 44px;
-		height: 44px;
-	}
-	.section-heading-image {
-		width: 100%;
-	}
-	.major-divider {
-		width: 100%;
-	}
-}
-/* =========================================================VERY SMALL SCREENS========================================================= */
-@media(max-width: 480px) {
-	.site-nav {
-		font-size: 0.86rem;
-	}
-	.stone-panel {
-		padding: 30px 22px;
-	}
-	.text-heading h2 {
-		font-size: 1.8rem;
-	}
-}
-/* Smaller border assets on mobile */
-@media (max-width: 800px) {
 	.panel-corner {
 		width: 44px;
 		height: 44px;
@@ -428,222 +444,252 @@ a {
 		top: 32px;
 		bottom: 32px;
 	}
+	.section-heading-image {
+		width: 100%;
+	}
+	.major-divider {
+		width: 100%;
+	}
 }
-
-/* =========================================================
-   CODE OF CONDUCT PAGE
-========================================================= */
-
+/* =========================================================VERY SMALL SCREENS========================================================= */
+@media (max-width: 600px) {
+	.footer-nav {
+		row-gap: 10px;
+	}
+	.footer-nav a {
+		padding:0 9px;
+		font-size: 0.88rem;
+	}
+}
+@media (max-width: 480px) {
+	.site-nav {
+		font-size: 0.86rem;
+	}
+	.stone-panel {
+		padding:30px 22px;
+	}
+	.text-heading h2 {
+		font-size: 1.8rem;
+	}
+}
+/* =========================================================CODE OF CONDUCT PAGE========================================================= */
 .conduct-title {
-    margin: 0;
-    color: var(--gold-bright);
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+	margin: 0;
+	color: var(--gold-bright);
+	font-size:clamp(2.2rem, 5vw, 4rem);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	text-shadow:0 3px 8px rgba(0, 0, 0, 0.9);
 }
-
 .conduct-intro {
-    padding-top: 60px;
+	padding-top: 60px;
 }
-
 .conduct-list {
-    position: relative;
-    z-index: 2;
-
-    margin: 24px 0 0;
-    padding-left: 0;
-
-    list-style: none;
+	position: relative;
+	z-index: 2;
+	margin:24px 0 0;
+	padding-left: 0;
+	list-style: none;
 }
-
 .conduct-list li {
-    position: relative;
-
-    margin: 14px 0;
-    padding-left: 28px;
-
-    color: #d8cebb;
+	position: relative;
+	margin:14px 0;
+	padding-left: 28px;
+	color: #d8cebb;
 }
-
 .conduct-list li::before {
-    content: "◆";
-
-    position: absolute;
-
-    left: 2px;
-    top: 0;
-
-    color: #a52620;
-
-    font-size: 0.8rem;
-
-    text-shadow:
-        0 0 8px rgba(190, 28, 22, 0.5);
+	content: "◆";
+	position: absolute;
+	left: 2px;
+	top: 0;
+	color: #a52620;
+	font-size: 0.8rem;
+	text-shadow:0 0 8px rgba(190, 28, 22, 0.5);
 }
-
 .policy-link-wrap {
-    position: relative;
-    z-index: 2;
-
-    margin: 28px 0;
-
-    text-align: center;
+	position: relative;
+	z-index: 2;
+	margin:28px 0;
+	text-align: center;
 }
-
 .policy-button {
-    display: inline-block;
-
-    padding: 13px 24px;
-
-    color: var(--gold-bright);
-
-    background:
-        linear-gradient(
-            rgba(30, 25, 16, 0.96),
-            rgba(13, 11, 8, 0.96)
-        );
-
-    border:
-        1px solid var(--gold-dark);
-
-    text-decoration: none;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.05em;
-
-    font-weight: bold;
-
-    box-shadow:
-        inset 0 0 12px rgba(205, 168, 88, 0.08),
-        0 5px 15px rgba(0, 0, 0, 0.35);
-
-    transition:
-        transform 0.18s ease,
-        color 0.18s ease,
-        border-color 0.18s ease;
+	display: inline-block;
+	padding:13px 24px;
+	color: var(--gold-bright);
+	background:linear-gradient(rgba(30, 25, 16, 0.96),rgba(13, 11, 8, 0.96));
+	border:1px solid var(--gold-dark);
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	box-shadow:inset 0 0 12px rgba(205, 168, 88, 0.08),0 5px 15px rgba(0, 0, 0, 0.35);
+	transition:transform 0.18s ease,color 0.18s ease,border-color 0.18s ease;
 }
-
 .policy-button:hover {
-    transform: translateY(-2px);
-
-    color: #f1d38a;
-
-    border-color: var(--gold-bright);
+	transform:translateY(-2px);
+	color: #f1d38a;
+	border-color:var(--gold-bright);
 }
-
 .conduct-footer-cta {
-    text-align: center;
-
-    padding-top: 25px;
+	text-align: center;
+	padding-top: 25px;
 }
-
 .conduct-footer-cta p {
-    max-width: 650px;
-
-    margin: 25px auto;
-
-    color: #d3c9b8;
+	max-width: 650px;
+	margin:25px auto;
+	color: #d3c9b8;
 }
-
-@media (max-width: 800px) {
-
-    .conduct-title {
-        font-size: 2rem;
-    }
-
-    .conduct-list li {
-        padding-left: 24px;
-    }
-
+/* =========================================================LARGER POLICY / PANEL BODY TEXT========================================================= */
+.stone-panel p,.conduct-list li {
+	font-size: 1.12rem;
+	line-height: 1.8;
 }
-
-/* Larger policy/body text */
-
-.stone-panel p,
-.conduct-list li {
-    font-size: 1.12rem;
-    line-height: 1.8;
-}
-
 .stone-panel h2 {
-    font-size: 1.8rem;
+	font-size: 1.8rem;
 }
-
 @media (max-width: 800px) {
-    .stone-panel p,
-    .conduct-list li {
-        font-size: 1.05rem;
-        line-height: 1.75;
-    }
-
-    .stone-panel h2 {
-        font-size: 1.55rem;
-    }
+	.conduct-title {
+		font-size: 2rem;
+	}
+	.conduct-list li {
+		padding-left: 24px;
+	}
+	.stone-panel p,.conduct-list li {
+		font-size: 1.05rem;
+		line-height: 1.75;
+	}
+	.stone-panel h2 {
+		font-size: 1.55rem;
+	}
 }
-
-/* =========================================================
-   ABOUT PAGE HEADER
-========================================================= */
-
+/* =========================================================ABOUT PAGE HEADER========================================================= */
 .about-page-header {
-    width: min(1000px, 92%);
-    margin: 35px auto 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 18px;
+	width:min(1000px, 92%);
+	margin:35px auto 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
 }
-
 .about-header-image {
-    width: min(620px, 68%);
-    height: auto;
+	width:min(620px, 68%);
+	height: auto;
 }
-
 .about-header-crest {
-    width: 85px;
-    height: auto;
-
-    flex-shrink: 0;
-
-    filter:
-        drop-shadow(0 8px 14px rgba(0,0,0,0.65));
+	width: 85px;
+	height: auto;
+	flex-shrink: 0;
+	filter:drop-shadow(0 8px 14px rgba(0, 0, 0, 0.65));
 }
-
-
-/* TABLET */
-
+/* =========================================================ABOUT MAIN PANEL========================================================= */
+.about-main-panel {
+	width:min(100%, 1000px);
+	margin:0 auto;
+}
+.about-main-panel h1 {
+	position: relative;
+	z-index: 2;
+	margin:0 0 25px;
+	color:var(--gold-bright);
+	font-size:clamp(2rem, 4vw, 3rem);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+/* =========================================================ABOUT PAGE BODY TEXT========================================================= */
+.about-main-panel p,.guild-values-list li {
+	font-size: 1.12rem;
+	line-height: 1.8;
+}
+/* =========================================================GUILD VALUES LIST========================================================= */
+.guild-values-list {
+	position: relative;
+	z-index: 2;
+	margin:26px 0 30px;
+	padding: 0;
+	list-style: none;
+}
+.guild-values-list li {
+	position: relative;
+	margin:13px 0;
+	padding-left: 30px;
+	color: #d8cebb;
+}
+.guild-values-list li::before {
+	content: "◆";
+	position: absolute;
+	left: 3px;
+	top: 0;
+	color: #a52520;
+	font-size: 0.82rem;
+	text-shadow:0 0 8px rgba(190, 28, 22, 0.6);
+}
+/* =========================================================IMPORTANT ABOUT STATEMENT========================================================= */
+.about-highlight {
+	margin-top:32px !important;
+	padding:20px 24px;
+	text-align: center;
+	color:#e6ca82 !important;
+	font-size:1.25rem !important;
+	font-style: italic;
+	border-top:1px solid rgba(196, 155, 71, 0.35);
+	border-bottom:1px solid rgba(196, 155, 71, 0.35);
+	background:rgba(118, 27, 21, 0.08);
+}
+/* =========================================================ABOUT CLOSING========================================================= */
+.about-closing-section {
+	text-align: center;
+	padding-top: 25px;
+}
+.about-closing-message {
+	max-width: 820px;
+	margin:30px auto;
+	color: #ddd1bd;
+	font-size: 1.25rem;
+	line-height: 1.8;
+}
+.about-closing-logo {
+	width:min(700px, 75%);
+	margin:32px auto 0;
+}
+.about-closing-logo img {
+	width: 100%;
+}
+/* =========================================================ABOUT PAGE TABLET========================================================= */
 @media (max-width: 800px) {
-
-    .about-page-header {
-        gap: 10px;
-        width: 96%;
-    }
-
-    .about-header-image {
-        width: 70%;
-    }
-
-    .about-header-crest {
-        width: 58px;
-    }
-
+	.about-page-header {
+		width: 96%;
+		gap: 10px;
+		margin-top: 24px;
+	}
+	.about-header-image {
+		width: 70%;
+	}
+	.about-header-crest {
+		width: 58px;
+	}
+	.about-main-panel h1 {
+		font-size: 1.9rem;
+	}
 }
-
-
-/* PHONE */
-
+/* =========================================================ABOUT PAGE PHONE========================================================= */
 @media (max-width: 520px) {
-
-    .about-header-image {
-        width: 72%;
-    }
-
-    .about-header-crest {
-        width: 42px;
-    }
-
+	.about-page-header {
+		gap: 6px;
+	}
+	.about-header-image {
+		width: 72%;
+	}
+	.about-header-crest {
+		width: 42px;
+	}
+	.about-main-panel h1 {
+		font-size: 1.6rem;
+	}
+	.about-main-panel p,.guild-values-list li {
+		font-size: 1.05rem;
+	}
+	.about-closing-message {
+		font-size: 1.1rem;
+	}
 }
