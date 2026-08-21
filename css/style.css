@@ -148,9 +148,10 @@ a {
 	text-shadow:0 3px 6px rgba(0, 0, 0, 0.9);
 }
 .text-heading p {
-	max-width: 680px;
-	margin:12px auto 0;
-	color: var(--muted);
+    max-width: 680px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    font-size: 1.2rem;
 }
 /* =========================================================SMALL GEM DIVIDER========================================================= */
 .simple-gem-divider {
