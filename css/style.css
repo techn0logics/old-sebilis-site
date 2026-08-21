@@ -582,3 +582,68 @@ a {
         font-size: 1.55rem;
     }
 }
+
+/* =========================================================
+   ABOUT PAGE HEADER
+========================================================= */
+
+.about-page-header {
+    width: min(1000px, 92%);
+    margin: 35px auto 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.about-header-image {
+    width: min(620px, 68%);
+    height: auto;
+}
+
+.about-header-crest {
+    width: 85px;
+    height: auto;
+
+    flex-shrink: 0;
+
+    filter:
+        drop-shadow(0 8px 14px rgba(0,0,0,0.65));
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .about-page-header {
+        gap: 10px;
+        width: 96%;
+    }
+
+    .about-header-image {
+        width: 70%;
+    }
+
+    .about-header-crest {
+        width: 58px;
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 520px) {
+
+    .about-header-image {
+        width: 72%;
+    }
+
+    .about-header-crest {
+        width: 42px;
+    }
+
+}
