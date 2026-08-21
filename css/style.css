@@ -1,466 +1,821 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root {
-  --bg: #0b0b0b;
-  --panel: rgba(10, 10, 9, 0.92);
-  --text: #e7e1d4;
-  --muted: #a69d8c;
-  --gold: #c6aa67;
-  --gold-dark: #6e5a30;
-  --border: #3a3328;
-  --max: 1100px;
+
+    --bg: #080807;
+
+    --panel:
+        rgba(8, 8, 7, 0.92);
+
+    --text:
+        #e3d8c4;
+
+    --muted:
+        #aaa08e;
+
+    --gold:
+        #c8a75d;
+
+    --gold-bright:
+        #dfbd6b;
+
+    --gold-dark:
+        #70592c;
+
+    --red:
+        #9f1d18;
+
+    --max:
+        1180px;
+
 }
+
+
 
 /* =========================================================
    BASE
 ========================================================= */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 
 body {
-  margin: 0;
 
-  background-color: var(--bg);
+    margin: 0;
 
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.18),
-      rgba(0, 0, 0, 0.18)
-    ),
-    url("../images/background.png");
+    background-color:
+        var(--bg);
 
-  background-repeat: repeat;
-  background-position: top left;
+    background-image:
 
-  color: var(--text);
+        linear-gradient(
+            rgba(0, 0, 0, 0.13),
+            rgba(0, 0, 0, 0.13)
+        ),
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+        url("../images/background.png");
 
-  line-height: 1.6;
+    background-repeat:
+        repeat;
+
+    background-position:
+        top center;
+
+    color:
+        var(--text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    line-height:
+        1.7;
+
 }
 
-a {
-  color: var(--gold);
-}
 
 img {
-  max-width: 100%;
-  display: block;
+
+    max-width:
+        100%;
+
+    display:
+        block;
+
 }
+
+
+a {
+    color:
+        var(--gold);
+}
+
 
 
 /* =========================================================
-   HEADER / NAVIGATION
+   NAVIGATION
 ========================================================= */
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
 
-  background: rgba(8, 8, 8, 0.94);
+    position:
+        sticky;
 
-  border-bottom: 1px solid var(--border);
+    top:
+        0;
 
-  backdrop-filter: blur(8px);
+    z-index:
+        100;
+
+    background:
+        rgba(5, 5, 5, 0.94);
+
+    border-bottom:
+        1px solid rgba(189, 153, 78, 0.3);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.55);
+
+    backdrop-filter:
+        blur(8px);
+
 }
+
 
 .nav-wrap {
-  width: min(94%, var(--max));
-  margin: auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width:
+        min(94%, var(--max));
 
-  gap: 24px;
+    margin:
+        auto;
 
-  min-height: 68px;
+    min-height:
+        72px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        32px;
+
 }
+
 
 .brand {
-  color: var(--gold);
 
-  text-decoration: none;
+    color:
+        var(--gold-bright);
 
-  font-weight: 700;
+    text-decoration:
+        none;
 
-  letter-spacing: 0.12em;
+    font-size:
+        1.1rem;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        0.12em;
+
 }
+
 
 .site-nav {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        24px;
+
 }
+
 
 .site-nav a {
-  color: var(--text);
 
-  text-decoration: none;
+    position:
+        relative;
+
+    color:
+        #ded7ca;
+
+    text-decoration:
+        none;
+
+    font-size:
+        0.95rem;
+
+    letter-spacing:
+        0.04em;
+
+    transition:
+        color 0.2s ease;
+
 }
 
-.site-nav a:hover {
-  color: var(--gold);
+
+.site-nav a:hover,
+.site-nav a.active {
+
+    color:
+        var(--gold-bright);
+
 }
+
+
+.site-nav a.active::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        -7px;
+
+    height:
+        1px;
+
+    background:
+        var(--gold);
+
+}
+
 
 
 /* =========================================================
    HERO
 ========================================================= */
 
-.hero {
-  min-height: 62vh;
+.hero-section {
 
-  display: grid;
-  place-items: center;
+    width:
+        100%;
 
-  text-align: center;
+    padding:
+        30px 18px 10px;
 
-  padding: 80px 20px 50px;
-
-  border-bottom: 1px solid var(--border);
 }
 
-.hero-inner {
-  width: min(92%, 900px);
+
+.hero-wrap {
+
+    width:
+        min(1600px, 98%);
+
+    margin:
+        auto;
+
 }
 
-.eyebrow {
-  color: var(--muted);
 
-  text-transform: uppercase;
+.hero-image {
 
-  letter-spacing: 0.18em;
+    width:
+        100%;
 
-  font-size: 0.8rem;
+    height:
+        auto;
+
+    margin:
+        auto;
+
+    box-shadow:
+        0 18px 60px rgba(0, 0, 0, 0.55);
+
 }
 
-.hero h1,
-.page-header h1,
-.section-title h2 {
-  color: var(--gold);
-}
-
-.hero h1 {
-  font-size: clamp(2.2rem, 6vw, 5rem);
-
-  margin: 8px 0;
-}
-
-.hero-copy {
-  max-width: 700px;
-
-  margin: 18px auto 26px;
-
-  color: #cfc8bb;
-}
 
 
 /* =========================================================
-   BUTTONS
+   MAIN
 ========================================================= */
 
-.cta-row {
-  display: flex;
+.site-main {
 
-  justify-content: center;
+    width:
+        100%;
 
-  flex-wrap: wrap;
-
-  gap: 14px;
 }
 
-.button {
-  display: inline-block;
 
-  padding: 12px 20px;
+.content-section {
 
-  border: 1px solid var(--gold);
+    width:
+        min(92%, var(--max));
 
-  background: #17140f;
+    margin:
+        auto;
 
-  color: var(--gold);
+    padding:
+        70px 0;
 
-  text-decoration: none;
-
-  font-weight: 700;
 }
 
-.button:hover {
-  background: #211b12;
-}
-
-.button.secondary {
-  border-color: #4a4338;
-
-  color: var(--text);
-}
 
 
 /* =========================================================
-   MAIN CONTENT
+   ABOUT IMAGE HEADER
 ========================================================= */
 
-main {
-  width: min(92%, var(--max));
+.section-heading-image {
 
-  margin: auto;
+    width:
+        min(900px, 94%);
+
+    margin:
+        0 auto 36px;
+
 }
 
-.section {
-  padding: 72px 0;
-}
-
-.section-title {
-  text-align: center;
-
-  margin-bottom: 28px;
-}
 
 
 /* =========================================================
-   SECTION DIVIDER
+   TEXT HEADINGS
 ========================================================= */
 
-.divider {
-  width: min(680px, 82%);
+.text-heading {
 
-  margin: 16px auto 0;
+    text-align:
+        center;
 
-  display: flex;
+    margin-bottom:
+        38px;
 
-  align-items: center;
-
-  gap: 20px;
 }
 
-.divider::before,
-.divider::after {
-  content: "";
 
-  flex: 1;
+.text-heading h2 {
 
-  height: 1px;
+    margin:
+        0;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold)
-    );
+    color:
+        var(--gold-bright);
+
+    font-size:
+        clamp(2rem, 4vw, 3.25rem);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.06em;
+
+    text-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.9);
+
 }
 
-.divider::after {
-  background:
-    linear-gradient(
-      90deg,
-      var(--gold),
-      transparent
-    );
+
+.text-heading p {
+
+    max-width:
+        680px;
+
+    margin:
+        12px auto 0;
+
+    color:
+        var(--muted);
+
 }
 
-.divider-gem {
-  width: 14px;
-
-  height: 14px;
-
-  transform: rotate(45deg);
-
-  background: #7d1616;
-
-  border: 1px solid #c85a47;
-
-  box-shadow:
-    0 0 14px rgba(180, 32, 32, 0.45);
-}
 
 
 /* =========================================================
-   GRID
+   SMALL GEM DIVIDER
 ========================================================= */
 
-.grid {
-  display: grid;
+.simple-gem-divider {
 
-  gap: 28px;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    width:
+        min(650px, 80%);
+
+    margin:
+        18px auto 0;
+
+    gap:
+        18px;
+
 }
 
-.grid.two {
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+
+.simple-gem-divider::before,
+.simple-gem-divider::after {
+
+    content:
+        "";
+
+    flex:
+        1;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
+
 }
+
+
+.simple-gem-divider::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.simple-gem-divider span {
+
+    width:
+        13px;
+
+    height:
+        13px;
+
+    background:
+        #931b18;
+
+    border:
+        1px solid #dc604a;
+
+    transform:
+        rotate(45deg);
+
+    box-shadow:
+        0 0 12px rgba(190, 28, 22, 0.7);
+
+}
+
 
 
 /* =========================================================
-   OLD SEBILIS CONTENT PANELS
+   STONE PANELS
 ========================================================= */
 
-.card,
-.callout {
-  position: relative;
+.stone-panel {
 
-  padding: 32px 38px;
+    position:
+        relative;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(16, 16, 14, 0.96),
-      rgba(7, 7, 6, 0.96)
-    );
+    padding:
+        40px 46px;
 
-  border: 1px solid var(--gold-dark);
+    background:
 
-  box-shadow:
-    inset 0 0 0 3px rgba(180, 145, 72, 0.07),
-    inset 0 0 24px rgba(0, 0, 0, 0.82),
-    0 8px 20px rgba(0, 0, 0, 0.35);
+        linear-gradient(
+            rgba(10, 10, 9, 0.93),
+            rgba(5, 5, 4, 0.95)
+        );
 
-  color: #d7caa9;
+    border:
+        1px solid rgba(164, 132, 66, 0.72);
+
+    box-shadow:
+
+        inset 0 0 0 3px
+        rgba(180, 145, 72, 0.06),
+
+        inset 0 0 35px
+        rgba(0, 0, 0, 0.95),
+
+        0 12px 35px
+        rgba(0, 0, 0, 0.5);
+
 }
 
 
-/*
-   Creates the thinner inner gold line.
-*/
+.stone-panel::before {
 
-.card::before,
-.callout::before {
-  content: "";
+    content:
+        "";
 
-  position: absolute;
+    position:
+        absolute;
 
-  inset: 7px;
+    inset:
+        8px;
 
-  border: 1px solid rgba(164, 132, 66, 0.42);
+    border:
+        1px solid rgba(169, 134, 67, 0.28);
 
-  pointer-events: none;
+    pointer-events:
+        none;
+
 }
+
+
+.stone-panel h2,
+.stone-panel h3 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    color:
+        var(--gold-bright);
+
+    margin-top:
+        0;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.05em;
+
+}
+
+
+.stone-panel p {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    color:
+        #d8cebb;
+
+}
+
 
 
 /* =========================================================
-   PANEL HEADINGS
+   REUSABLE CORNER ASSET
 ========================================================= */
 
-.card h3 {
-  position: relative;
+.panel-corner {
 
-  z-index: 2;
+    position:
+        absolute;
 
-  color: #d3ad55;
+    width:
+        54px;
 
-  margin-top: 0;
+    height:
+        54px;
 
-  text-transform: uppercase;
+    background-image:
+        url("../images/single-corner.png");
 
-  letter-spacing: 0.04em;
+    background-size:
+        contain;
+
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
+
+    pointer-events:
+        none;
+
+    z-index:
+        5;
+
 }
 
-.card p,
-.callout p,
-.callout h2 {
-  position: relative;
 
-  z-index: 2;
+.corner-tl {
+
+    top:
+        -7px;
+
+    left:
+        -7px;
+
 }
 
-.callout {
-  text-align: center;
+
+.corner-tr {
+
+    top:
+        -7px;
+
+    right:
+        -7px;
+
+    transform:
+        rotate(90deg);
+
 }
+
+
+.corner-br {
+
+    bottom:
+        -7px;
+
+    right:
+        -7px;
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+.corner-bl {
+
+    bottom:
+        -7px;
+
+    left:
+        -7px;
+
+    transform:
+        rotate(270deg);
+
+}
+
 
 
 /* =========================================================
-   DECORATIVE CORNER ASSETS
+   MAJOR DIVIDER
 ========================================================= */
 
-.corner {
-  position: absolute;
+.major-divider {
 
-  width: 44px;
-  height: 44px;
+    width:
+        min(1350px, 96%);
 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    margin:
+        5px auto;
 
-  pointer-events: none;
-
-  z-index: 5;
 }
 
 
-/* Top Left */
+.major-divider img {
 
-.corner.tl {
-  top: -5px;
-  left: -5px;
+    width:
+        100%;
 
-  background-image:
-    url("../images/panel-corner-top-left.png");
+    height:
+        auto;
+
 }
 
-
-/* Top Right */
-
-.corner.tr {
-  top: -5px;
-  right: -5px;
-
-  background-image:
-    url("../images/panel-corner-top-right.png");
-}
-
-
-/* Bottom Right */
-
-.corner.br {
-  bottom: -5px;
-  right: -5px;
-
-  background-image:
-    url("../images/panel-corner-bottom-right.png");
-}
-
-
-/* Bottom Left */
-
-.corner.bl {
-  bottom: -5px;
-  left: -5px;
-
-  background-image:
-    url("../images/panel-corner-bottom-left.png");
-}
 
 
 /* =========================================================
-   PAGE HEADER
+   FEATURE CARDS
 ========================================================= */
 
-.page-header {
-  padding: 76px 20px 40px;
+.feature-grid {
 
-  text-align: center;
+    display:
+        grid;
 
-  border-bottom: 1px solid var(--border);
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        30px;
+
 }
 
-.page-header h1 {
-  font-size: clamp(2rem, 5vw, 3.8rem);
 
-  margin: 0;
+.feature-panel {
+
+    text-align:
+        center;
+
+    min-height:
+        245px;
+
 }
 
-.page-header p {
-  color: var(--muted);
+
+.feature-panel h3 {
+
+    font-size:
+        1.35rem;
+
 }
+
+
+
+/* =========================================================
+   OLD SEBILIS WIDE LOGO DIVIDER
+========================================================= */
+
+.name-divider {
+
+    width:
+        min(900px, 85%);
+
+    margin:
+        20px auto 0;
+
+}
+
+
+.name-divider img {
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+}
+
+
+
+/* =========================================================
+   JOIN SECTION
+========================================================= */
+
+.join-section {
+
+    text-align:
+        center;
+
+}
+
+
+.action-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        38px;
+
+    align-items:
+        center;
+
+    width:
+        min(1000px, 100%);
+
+    margin:
+        auto;
+
+}
+
+
+.graphic-button {
+
+    display:
+        block;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+
+}
+
+
+.graphic-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.015);
+
+    filter:
+        brightness(1.12);
+
+}
+
+
+.graphic-button img {
+
+    width:
+        100%;
+
+}
+
 
 
 /* =========================================================
@@ -468,76 +823,213 @@ main {
 ========================================================= */
 
 .site-footer {
-  margin-top: 60px;
 
-  border-top: 1px solid var(--border);
+    margin-top:
+        50px;
 
-  padding: 34px 20px;
+    padding:
+        45px 20px;
 
-  text-align: center;
+    text-align:
+        center;
 
-  color: var(--muted);
+    background:
+        rgba(4, 4, 4, 0.72);
 
-  font-size: 0.9rem;
+    border-top:
+        1px solid rgba(164, 132, 66, 0.4);
+
+    color:
+        var(--muted);
+
 }
 
 
-/* =========================================================
-   DEVELOPMENT PLACEHOLDER
-========================================================= */
+.footer-logo {
 
-.asset-placeholder {
-  border: 1px dashed #544a39;
+    width:
+        min(450px, 70%);
 
-  min-height: 160px;
+    margin:
+        0 auto 15px;
 
-  display: grid;
-
-  place-items: center;
-
-  color: #786f61;
-
-  padding: 20px;
-
-  margin: 22px 0;
 }
+
+
+.site-footer p {
+
+    margin:
+        5px 0;
+
+}
+
+
+.copyright {
+
+    font-size:
+        0.85rem;
+
+    opacity:
+        0.75;
+
+}
+
 
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 720px) {
+@media
+(max-width: 800px) {
 
-  .nav-wrap {
-    align-items: flex-start;
 
-    flex-direction: column;
+    .nav-wrap {
 
-    padding: 16px 0;
-  }
+        flex-direction:
+            column;
 
-  .site-nav {
-    gap: 14px;
-  }
+        align-items:
+            center;
 
-  .grid.two {
-    grid-template-columns: 1fr;
-  }
+        gap:
+            10px;
 
-  .hero {
-    min-height: auto;
+        padding:
+            14px 0;
 
-    padding-top: 60px;
-  }
+    }
 
-  .card,
-  .callout {
-    padding: 28px 26px;
-  }
 
-  .corner {
-    width: 36px;
-    height: 36px;
-  }
+    .site-nav {
+
+        justify-content:
+            center;
+
+        gap:
+            14px;
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .hero-section {
+
+        padding:
+            15px 5px;
+
+    }
+
+
+    .hero-wrap {
+
+        width:
+            100%;
+
+    }
+
+
+    .content-section {
+
+        width:
+            90%;
+
+        padding:
+            48px 0;
+
+    }
+
+
+    .stone-panel {
+
+        padding:
+            34px 28px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .action-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            24px;
+
+    }
+
+
+    .panel-corner {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+    }
+
+
+    .section-heading-image {
+
+        width:
+            100%;
+
+    }
+
+
+    .major-divider {
+
+        width:
+            100%;
+
+    }
+
+
+}
+
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media
+(max-width: 480px) {
+
+
+    .site-nav {
+
+        font-size:
+            0.86rem;
+
+    }
+
+
+    .stone-panel {
+
+        padding:
+            30px 22px;
+
+    }
+
+
+    .text-heading h2 {
+
+        font-size:
+            1.8rem;
+
+    }
+
+
 }
