@@ -178,7 +178,7 @@ a {
 	transform:rotate(45deg);
 	box-shadow:0 0 12px rgba(190, 28, 22, 0.7);
 }
-/* =========================================================STONE PANELS========================================================= */
+/* ========================================================= PANELS========================================================= */
 .stone-panel {
 	position: relative;
 	padding: 40px 46px;
@@ -189,11 +189,11 @@ a {
 .stone-panel::before {
 	content: "";
 	position: absolute;
-	top: 14px;
-	right: 14px;
-	bottom: 14px;
-	left: 14px;
-	border: 2px solid var(--gold);
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	border: 3px solid var(--gold);
 	pointer-events: none;
 	z-index: 1;
 }
