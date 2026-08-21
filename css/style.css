@@ -497,6 +497,11 @@ a {
 	margin:25px auto;
 	color: #d3c9b8;
 }
+
+.conduct-footer-cta p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
 /* =========================================================LARGER POLICY / PANEL BODY TEXT========================================================= */
 .stone-panel p,.conduct-list li {
 	font-size: 1.12rem;
