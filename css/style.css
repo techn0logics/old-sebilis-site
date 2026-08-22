@@ -153,7 +153,7 @@ a {
 	color: var(--muted);
 	font-size: 1.5rem;
 }
-/* =========================================================SMALL GEM DIVIDER========================================================= */
+/* =========================================================ORNATE GOLD KNOT DIVIDER========================================================= */
 .simple-gem-divider {
 	display: flex;
 	align-items: center;
@@ -171,13 +171,32 @@ a {
 	background:linear-gradient(90deg,var(--gold),transparent);
 }
 .simple-gem-divider span {
+	position: relative;
+	width: 36px;
+	height: 20px;
+	flex: 0 0 36px;
+	background: none;
+	border: none;
+	transform: none;
+	box-shadow: none;
+}
+.simple-gem-divider span::before,.simple-gem-divider span::after {
+	content: "";
+	position: absolute;
+	top: 50%;
 	width: 13px;
 	height: 13px;
-	background:radial-gradient(circle at 35% 30%,#ff7660,#b31c18 40%,#5c0908 78%);
-	border:1px solid #dc604a;
-	transform: rotate(45deg);
-	box-shadow:0 0 12px rgba(190, 28, 22, 0.7);
+	border:1px solid var(--gold-bright);
+	box-shadow:0 0 5px rgba(223, 189, 107, 0.2);
+	transform:translateY(-50%)rotate(45deg);
 }
+.simple-gem-divider span::before {
+	left: 4px;
+}
+.simple-gem-divider span::after {
+	right: 4px;
+}
+
 /* =========================================================PANELS - CSS FANTASY FRAME========================================================= */
 .stone-panel {
 	position: relative;
