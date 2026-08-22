@@ -175,7 +175,7 @@ a {
 	height: 13px;
 	background:radial-gradient(circle at 35% 30%,#ff7660,#b31c18 40%,#5c0908 78%);
 	border:1px solid #dc604a;
-	transform:rotate(45deg);
+	transform: rotate(45deg);
 	box-shadow:0 0 12px rgba(190, 28, 22, 0.7);
 }
 /* =========================================================PANELS - CSS FANTASY FRAME========================================================= */
@@ -195,17 +195,17 @@ a {
 	pointer-events: none;
 	z-index: 1;
 }
-/* =========================================================TOP-LEFT RED GEM========================================================= */
+/* =========================================================TOP-CENTER RED GEM========================================================= */
 .stone-panel::after {
 	content: "";
 	position: absolute;
 	width: 18px;
 	height: 18px;
 	top: -10px;
-	left: -10px;
+	left: 50%;
+	transform:translateX(-50%)rotate(45deg);
 	background:radial-gradient(circle at 35% 30%,#ff8a70 0%,#d52821 28%,#8c120e 58%,#3e0504 100%);
 	border:2px solid #b78c43;
-	transform:rotate(45deg);
 	box-shadow:0 0 0 2px #33230f,0 0 10px rgba(180, 20, 15, 0.85),inset 0 0 5px rgba(255, 170, 130, 0.35);
 	z-index: 8;
 }
@@ -222,32 +222,6 @@ a {
 }
 .stone-panel p {
 	color: #d8cebb;
-}
-/* =========================================================GOLD DECORATIVE CORNER BRACKET========================================================= */
-.stone-panel h2::before,.stone-panel h3::before {
-	content: "";
-	position: absolute;
-	top: -42px;
-	left: -48px;
-	width: 42px;
-	height: 42px;
-	border-top:3px solid var(--gold-bright);
-	border-left:3px solid var(--gold-bright);
-	pointer-events: none;
-	opacity: 0.72;
-	filter:drop-shadow(0 0 4px rgba(210, 168, 76, 0.22));
-}
-/* SMALL INNER CORNER DETAIL */
-.stone-panel h2::after,.stone-panel h3::after {
-	content: "";
-	position: absolute;
-	top: -35px;
-	left: -41px;
-	width: 25px;
-	height: 25px;
-	border-top:1px solid rgba(223, 189, 107, 0.55);
-	border-left:1px solid rgba(223, 189, 107, 0.55);
-	pointer-events: none;
 }
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
@@ -388,18 +362,6 @@ a {
 	}
 	.stone-panel {
 		padding: 34px 28px;
-	}
-	.stone-panel h2::before,.stone-panel h3::before {
-		top: -36px;
-		left: -30px;
-		width: 32px;
-		height: 32px;
-	}
-	.stone-panel h2::after,.stone-panel h3::after {
-		top: -30px;
-		left: -24px;
-		width: 18px;
-		height: 18px;
 	}
 	.feature-grid {
 		grid-template-columns: 1fr;
