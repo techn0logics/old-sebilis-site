@@ -272,6 +272,11 @@ a {
 	line-height: 1.2;
 	white-space: nowrap;
 }
+@media (max-width: 1100px) {
+    .feature-panel h3 {
+        font-size: 1rem;
+    }
+}
 .feature-panel p {
 	margin: 0;
 	flex-grow: 1;
