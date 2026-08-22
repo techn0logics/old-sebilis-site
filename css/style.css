@@ -223,23 +223,23 @@ a {
 	z-index: 10;
 }
 .corner-tl {
-	top: -10px;
-	left: -10px;
+    top: -20px;
+    left: -20px;
 }
 .corner-tr {
-	top: -10px;
-	right: -10px;
-	transform:rotate(90deg);
+    top: -20px;
+    right: -20px;
+    transform: rotate(90deg);
 }
 .corner-br {
-	bottom: -10px;
-	right: -10px;
-	transform:rotate(180deg);
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(180deg);
 }
 .corner-bl {
-	bottom: -10px;
-	left: -10px;
-	transform:rotate(270deg);
+    bottom: -20px;
+    left: -20px;
+    transform: rotate(270deg);
 }
 /* =========================================================MAJOR DIVIDER========================================================= */
 .major-divider {
