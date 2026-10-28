@@ -147,29 +147,80 @@
      HOW TO JOIN
 ===================================================== -->
       <section class="content-section conduct-footer-cta">
-        <div class="simple-gem-divider">
-          <span></span>
-        </div>
-        <h2> Ready to Join Old Sebilis? </h2>
-        <p> If you've read through our Code of Conduct and feel like Old Sebilis is the kind of community you're looking for, the next step is simple. </p>
-        <p> Please Join Our Discord https://discord.gg/PsqqX7tS8t and copy/pasta the questionaire below and submit your answer using the "New Post" button   </p>
-        <p>**Character Name:** 
-            **Class:** 
-            **Current Level:** 
-            **Time Zone:** 
-            **Typical Playtime (days/hours):** 
-            
-            **Guild Sponsor (character name):** 
-            *(If you don't have one, write "Need Recruiter.")*
-            
-            **Previous Guild(s), if any:** 
-            
-            **What are you looking for in a guild?** 
-            **Tell us a little about yourself and your experience with Monsters & Memories or other MMOs:** 
-            
-            **Anything else you'd like us to know?** 
-          </p>
-      </section>
+  <div class="simple-gem-divider">
+    <span></span>
+  </div>
+  <h2>Ready to Join Old Sebilis?</h2>
+  <p>If you've read through our Code of Conduct and feel like Old Sebilis is the kind of community you're looking for, the next step is simple.</p>
+  <p>Please <a href="https://discord.gg/PsqqX7tS8t" target="_blank" rel="noopener">join our Discord</a>, copy the questionnaire below, and submit your answers using the "New Post" button.</p>
+
+  <textarea id="appTemplate" class="app-template" readonly rows="14">**Character Name:** 
+**Class:** 
+**Current Level:** 
+**Time Zone:** 
+**Typical Playtime (days/hours):** 
+
+**Guild Sponsor (character name):** 
+*(If you don't have one, write "Need Recruiter.")*
+
+**Previous Guild(s), if any:** 
+
+**What are you looking for in a guild?** 
+**Tell us a little about yourself and your experience with Monsters & Memories or other MMOs:** 
+
+**Anything else you'd like us to know?** </textarea>
+
+  <button id="appCopyBtn" class="app-copy-btn" type="button">Copy questionnaire</button>
+
+  <style>
+    .app-template {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 12px 0;
+      padding: 12px;
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(128, 128, 128, 0.5);
+      border-radius: 8px;
+      resize: vertical;
+    }
+    .app-copy-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 0;
+      border-radius: 6px;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var box = document.getElementById('appTemplate');
+      var btn = document.getElementById('appCopyBtn');
+
+      box.addEventListener('focus', function () { box.select(); });
+
+      btn.addEventListener('click', function () {
+        function done(ok) {
+          btn.textContent = ok ? 'Copied!' : 'Press Ctrl+C to copy';
+          setTimeout(function () { btn.textContent = 'Copy questionnaire'; }, 2000);
+        }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(box.value).then(function () { done(true); }, function () { done(false); });
+        } else {
+          box.select();
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (e) {}
+          done(ok);
+        }
+      });
+    })();
+  </script>
+</section>
     </main>
     <!-- =====================================================
      FOOTER
